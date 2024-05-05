@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "author": "20ELB050 PRATYUSH KAUSHIK",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 70.54,
+      "left": 137.35,
+      "rotate": 90,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    { "type": "wokwi-led", "id": "led1", "top": -13.2, "left": 23, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -32.2,
+      "left": 144,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "led1:A", "pico:GP9", "green", [ "v9.6", "h96" ] ],
+    [ "led1:C", "pico:GND.3", "green", [ "v67.2", "h106" ] ],
+    [ "btn1:2.r", "pico:GND.1", "green", [ "h0" ] ],
+    [ "btn1:1.r", "pico:GP1", "green", [ "v0", "h67.4" ] ]
+  ],
+  "dependencies": {}
+}
